@@ -1,0 +1,3 @@
+Invoice No : INV-1001
+Customer   : Dipendra
+Amount     : 25000

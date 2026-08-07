@@ -1,0 +1,3 @@
+2026-08-06 20:46:47,674 | INFO | Employee 101 logged in
+2026-08-06 20:46:47,675 | WARNING | Employee 101 entered wrong password once
+2026-08-06 20:46:47,675 | ERROR | Database connection failed

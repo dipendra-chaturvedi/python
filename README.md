@@ -1,4 +1,4 @@
-# python
+## python
 
 Python
 │
@@ -235,3 +235,10 @@ Python
 │   └── abc
 │       ├── ABC
 │       └── abstractmethod
+
+
+## for access mysql anywhere use this command only for terminal session
+
+$env:Path += ";C:\Users\d.s.chaturvedi\Documents\xampp\xampp\mysql\bin"
+
+mysql -u root

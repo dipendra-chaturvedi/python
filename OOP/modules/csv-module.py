@@ -12,3 +12,9 @@ with open(file_path, "a", newline="", encoding="utf-8") as file:
     writer.writerow(employee)
 
 print("Employee Saved Successfully")
+
+
+#csv.reader()      # Read CSV
+#csv.writer()      # Write CSV
+#csv.DictReader()  # Read as dictionary
+#csv.DictWriter()  # Write using dictionary

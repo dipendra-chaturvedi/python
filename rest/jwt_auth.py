@@ -36,6 +36,37 @@ def login():
         "token": token
     }, 200
 
+@app.route("/profile", methods=["GET"])
+def profile():
+
+    token = request.headers.get("Authorization")
+
+    if not token:
+        return {
+            "message": "Token is required"
+        }, 401
+
+    try:
+        decoded_data = jwt.decode(
+            token,
+            secret_key,
+            algorithms=["HS256"]
+        )
+
+        return {
+            "message": "Access granted",
+            "username": decoded_data["username"]
+        }, 200
+
+    except jwt.ExpiredSignatureError:
+        return {
+            "message": "Token expired"
+        }, 401
+
+    except jwt.InvalidTokenError:
+        return {
+            "message": "Invalid token"
+        }, 401
 
 if __name__ == "__main__":
     app.run(debug=True)

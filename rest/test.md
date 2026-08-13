@@ -26,3 +26,43 @@ decoded_data = jwt.decode(
 )
 
 print(decoded_data)
+
+
+# jwt_auth.py working
+
+        POST /login
+             │
+             ▼
+   username + password
+             │
+             ▼
+      Flask verifies
+        /         \
+     Wrong        Correct
+       │             │
+       ▼             ▼
+  401 Unauthorized  Generate JWT
+                     │
+                     ▼
+               Return token
+                     │
+              Postman stores it
+                     │
+                     ▼
+               GET /profile
+                     │
+             Authorization:
+                 <token>
+                     │
+                     ▼
+                jwt.decode()
+                     │
+          ┌──────────┼──────────┐
+          │          │          │
+        Valid     Expired     Invalid
+          │          │          │
+          ▼          ▼          ▼
+       200 OK      401        401
+          │
+          ▼
+     Profile data

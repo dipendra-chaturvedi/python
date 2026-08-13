@@ -18,12 +18,66 @@ def home():
     }, 200
 
 # Employees routes
+# @app.route("/employees", methods=["GET"])
+# def employees():
+#     return get_all_employees(), 200
+
 @app.route("/employees", methods=["GET"])
 def employees():
-    return get_all_employees(), 200
 
+    name = request.args.get("name")
+    salary = request.args.get("salary")
+    page = request.args.get("page")
+    limit = request.args.get("limit")
+    sort = request.args.get("sort")
+    order = request.args.get("order")
 
+    all_employees = get_all_employees()
 
+    filtered_employees = all_employees
+
+    if name:
+        filtered_employees = [
+            employee for employee in filtered_employees
+            if employee["name"].lower() == name.lower()
+        ]
+
+    if salary:
+        filtered_employees = [
+            employee for employee in filtered_employees
+            if employee["salary"] == int(salary)
+        ]
+
+    if page and limit:
+
+        page = int(page)
+        limit = int(limit)
+
+        start = (page - 1) * limit
+        end = start + limit
+
+        filtered_employees = filtered_employees[start:end]
+
+    reverse_order = order == "desc"
+
+    if sort == "name":
+        filtered_employees = sorted(
+            filtered_employees,
+            key=lambda employee: employee["name"],
+            reverse=reverse_order
+        )
+
+    if sort == "salary":
+        filtered_employees = sorted(
+            filtered_employees,
+            key=lambda employee: employee["salary"],
+            reverse=reverse_order
+        )
+
+    return {
+        "success": True,
+        "data": filtered_employees
+    }, 200
 
 # Get employee by ID route
 # @app.route("/employees/<int:employee_id>", methods=["GET"])

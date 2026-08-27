@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Employee Result</title>
-</head>
+{% extends "base.html" %}
 
-<body>
+{% block title %}
+Employee Result
+{% endblock %}
 
-    <h2>Employee Added</h2>
+{% block content %}
 
-    <p>Name: {{ name }}</p>
-    <p>Salary: ₹{{ salary }}</p>
+<h2>Employee Added</h2>
 
-</body>
-</html>
+<p>Name: {{ name }}</p>
+<p>Salary: ₹{{ salary }}</p>
+
+{% endblock %}

@@ -1,7 +1,7 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 
 app = Flask(__name__)
-
+app.secret_key = "temporary-secret-key"
 
 @app.route("/form")
 def form():
@@ -18,6 +18,8 @@ def add_employee():
 
     if not salary or not salary.isdigit():
         return "Salary must be a number", 400
+
+    flash("Employee added successfully")
 
     return redirect(
     url_for(
@@ -38,5 +40,8 @@ def result():
         salary=salary
     )
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template("404.html"), 404
 
 app.run(debug=True)

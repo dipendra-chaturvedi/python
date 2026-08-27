@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+Add Employee
+{% endblock %}
+
+{% block content %}
+
+<h1>Add Employee</h1>
+
+<form method="POST" action="{{ url_for('employee.add_employee') }}">
+
+    <input
+        type="text"
+        name="name"
+        placeholder="Enter employee name"
+        required
+    >
+
+    <input
+        type="number"
+        name="salary"
+        placeholder="Enter salary"
+        required
+    >
+
+    <button type="submit">
+        Add Employee
+    </button>
+
+</form>
+
+{% endblock %}

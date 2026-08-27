@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block title %}My Web App{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <nav>
+        <a href="{{ url_for('form') }}">Add Employee</a>
+    </nav>
+
+    <hr>
+
+    {% with messages = get_flashed_messages() %}
+
+    {% if messages %}
+
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+
+    {% endif %}
+
+    {% endwith %}
+    {% block content %}
+    {% endblock %}
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

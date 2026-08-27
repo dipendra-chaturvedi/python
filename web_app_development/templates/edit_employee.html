@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+Edit Employee
+{% endblock %}
+
+{% block content %}
+
+<h1>Edit Employee</h1>
+
+<form method="POST">
+
+    <input
+        type="text"
+        name="name"
+        value="{{ employee[1] }}"
+        required
+    >
+
+    <input
+        type="number"
+        name="salary"
+        value="{{ employee[2] }}"
+        required
+    >
+
+    <button type="submit">
+        Update Employee
+    </button>
+
+</form>
+
+{% endblock %}

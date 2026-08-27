@@ -1,32 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Employee Form</title>
-</head>
+{% extends "base.html" %}
 
-<body>
+{% block title %}
+Add Employee
+{% endblock %}
 
-    <h1>Add Employee</h1>
+{% block content %}
 
-    <form method="POST" action="/add">
+<h1>Add Employee</h1>
 
-        <input
-            type="text"
-            name="name"
-            placeholder="Enter employee name"
-        >
+<form method="POST" action="/add">
 
-        <input
-            type="number"
-            name="salary"
-            placeholder="Enter salary"
-        >
+    <input
+        type="text"
+        name="name"
+        placeholder="Enter employee name"
+    >
 
-        <button type="submit">
-            Submit
-        </button>
+    <input
+        type="number"
+        name="salary"
+        placeholder="Enter salary"
+    >
 
-    </form>
+    <button type="submit">
+        Submit
+    </button>
 
-</body>
-</html>
+</form>
+
+<button type="button" onclick="showMessage()">
+    Test JavaScript
+</button>
+
+{% endblock %}

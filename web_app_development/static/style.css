@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+input {
+    display: block;
+    width: 280px;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.employee-card {
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin-bottom: 10px;
+    max-width: 450px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    text-decoration: none;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #e8e8e8;
+}
+
+.btn-danger {
+    border: 1px solid #b33;
+}
+
+.flash-message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background: #f5f5f5;
+}
+
+.add-button {
+    margin-bottom: 20px;
+}
+
+.employee-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.employee-list {
+    max-width: 700px;
+}
+
+.employee-card {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 18px;
+    margin-bottom: 15px;
+}
+
+.employee-info {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 15px;
+}
+
+.employee-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.employee-field .label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.action-buttons form {
+    margin: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background: #f5f5f5;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-danger {
+    border-color: #d33;
+}
+
+.employee-table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.employee-table th,
+.employee-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+.employee-table th {
+    background: #f5f5f5;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.action-buttons form {
+    margin: 0;
+}

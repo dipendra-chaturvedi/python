@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+Employee Details
+{% endblock %}
+
+{% block content %}
+
+<h1>Employee Details</h1>
+
+<p>ID: {{ employee[0] }}</p>
+<p>Name: {{ employee[1] }}</p>
+<p>Salary: ₹{{ employee[2] }}</p>
+
+<a href="{{ url_for('employee.employee') }}">
+    Back to Employee List
+</a>
+
+{% endblock %}

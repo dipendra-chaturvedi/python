@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}
+Employee
+{% endblock %}
+
+{% block content %}
+
+<div class="employee-page-header">
+    <h1>Employee List</h1>
+
+    <a
+        class="btn add-button"
+        href="{{ url_for('employee.add_employee') }}"
+    >
+        Add Employee
+    </a>
+</div>
+
+<table class="employee-table">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {% for employee in employees %}
+
+        <tr>
+            <td>{{ employee[0] }}</td>
+            <td>{{ employee[1] }}</td>
+            <td>₹{{ employee[2] }}</td>
+
+            <td>
+                <div class="action-buttons">
+
+                    <a
+                        class="btn"
+                        href="{{ url_for('employee.employee_detail', id=employee[0]) }}"
+                    >
+                        Details
+                    </a>
+
+                    <a
+                        class="btn"
+                        href="{{ url_for('employee.edit_employee', id=employee[0]) }}"
+                    >
+                        Edit
+                    </a>
+
+                    <form
+                        method="POST"
+                        action="{{ url_for('employee.delete_employee', id=employee[0]) }}"
+                    >
+                        <button
+                            type="submit"
+                            class="btn btn-danger"
+                        >
+                            Delete
+                        </button>
+                    </form>
+
+                </div>
+            </td>
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+{% endblock %}

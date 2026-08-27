@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block title %}Employee App{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="{{ url_for('home.home') }}">
+            Home
+        </a>
+
+        {% if session.get("user") %}
+
+        <a href="{{ url_for('employee.employee') }}">
+            Employee
+        </a>
+
+        <a href="{{ url_for('auth.logout') }}">
+            Logout
+        </a>
+
+        {% else %}
+
+        <a href="{{ url_for('auth.login') }}">
+            Login
+        </a>
+
+        {% endif %}
+
+    </nav>
+
+    <hr>
+
+    {% with messages = get_flashed_messages() %}
+
+    {% if messages %}
+
+    {% for message in messages %}
+    <p class="flash-message">
+        {{ message }}
+    </p>
+    {% endfor %}
+
+    {% endif %}
+
+    {% endwith %}
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+</html>

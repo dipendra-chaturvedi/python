@@ -60,6 +60,8 @@ def add_employee():
         return redirect(
             url_for("employee.employee")
         )
+        
+    return render_template("add_employee.html")
 
 @employee_bp.route("/employee/<int:id>")
 @login_required
@@ -166,5 +168,3 @@ def delete_employee(id):
     return redirect(
         url_for("employee.employee")
     )
-
-    return render_template("add_employee.html")

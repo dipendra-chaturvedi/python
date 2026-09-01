@@ -1,51 +1,56 @@
 # Python (Programming Language)
 
 ## Assessent Topic for mycompytency
-About The assessment
-Topics covered
-Decorators
-Python - Collections
-Exceptions
-packages
-Python - Basic
-Python - Regular Expression
-Python- Database Access
-Python- Networking
-Python- RESTful
-Python - Web Development
-Python - Security
-Python - Big Data
-Python - Data Science
-Python- Graph Theory
-Python - Text Mining
-Python - Image Processing
-Python - ML/ DL/ DS on cloud
-Python - Data Scrapping
-Python - IoT
-Python - IDE
-Python - OOPS
-Python - system programming
-Python - Data Structure
-Python - GUI
-Python - Multithreading
-Python- tools and utilities
-Python - NoSQL
-Python - Gaming
-Python - PaaS
-Python- Web App Development
-Python - DevOps
-Python- Configuration Management
+
+- Decorators
+- Python - Collections
+- Exceptions
+- packages
+- Python - Basic
+- Python - Regular Expression
+- Python- Database Access
+- Python- Networking
+- Python- RESTful
+- Python - Web Development
+- Python - Security
+- Python - Big Data
+- Python - Data Science
+- Python- Graph Theory
+- Python - Text Mining
+- Python - Image Processing
+- Python - ML/ DL/ DS on cloud
+- Python - Data Scrapping
+- Python - IoT
+- Python - IDE
+- Python - OOPS
+- Python - system programming
+- Python - Data Structure
+- Python - GUI
+- Python - Multithreading
+- Python- tools and utilities
+- Python - NoSQL
+- Python - Gaming
+- Python - PaaS
+- Python- Web App Development
+- Python - DevOps
+- Python- Configuration Management
 
 ## About this skill
 An open source & interpreted programming language. It supports multiple programming paradigms including procedural, object-oriented and functional programming. A language constructs and object-oriented approach to write logical code for different projects.
 
 ## Categories
-Basic, Development, Programming and Configuration knowledge.
-Design, Architecture, Framework and Business- Process knowledge.
-Solutionin...
+- Basic
+- Development
+- Programming and 
+- Configuration knowledge
+- Design
+- Architecture 
+- Framework
+- Business- Process knowledge Solutionin...
 
 ## python Modules and functions
 
+```
 Python
 │
 ├── Built-in Functions
@@ -281,13 +286,17 @@ Python
 │   └── abc
 │       ├── ABC
 │       └── abstractmethod
+```
 
 ## for access mysql anywhere use this command only for terminal session
 
+```
   $env:Path += ";C:\Users\d.s.chaturvedi\Documents\xampp\xampp\mysql\bin"
+```
 
+```
   mysql -u root
-
+```
 
 
 

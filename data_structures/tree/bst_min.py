@@ -1,0 +1,25 @@
+class Node:
+
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
+
+
+def find_min(root):
+
+    current = root
+
+    while current.left:
+        current = current.left
+
+    return current.data
+
+
+root = Node(50)
+root.left = Node(30)
+root.right = Node(70)
+root.left.left = Node(20)
+root.left.right = Node(40)
+
+print(find_min(root))

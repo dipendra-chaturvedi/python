@@ -1,10 +1,23 @@
 import tkinter as tk
 from tkinter import messagebox
 import sqlite3
+import os
 
 
-DB_PATH = r"C:\Development\python\gui\employee_management_app\database\employee.db"
-APP_PATH = r"C:\Development\python\gui\employee_management_app\pages"
+BASE_DIR = os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))
+)
+
+DB_PATH = os.path.join(
+    BASE_DIR,
+    "database",
+    "employee.db"
+)
+
+APP_PATH = os.path.join(
+    BASE_DIR,
+    "pages"
+)
 
 
 def open_dashboard():

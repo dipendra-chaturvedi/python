@@ -1,10 +1,26 @@
 import sqlite3
+import os
 
-connection = sqlite3.connect(
-    r"C:\Development\python\gui\employee_management_app\database\employee.db"
+
+# Project root:
+# employee_management_app/
+BASE_DIR = os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))
 )
 
+
+# Database location
+DB_PATH = os.path.join(
+    BASE_DIR,
+    "database",
+    "employee.db"
+)
+
+
+connection = sqlite3.connect(DB_PATH)
+
 cursor = connection.cursor()
+
 
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS users (
@@ -13,6 +29,7 @@ CREATE TABLE IF NOT EXISTS users (
     password TEXT
 )
 """)
+
 
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS employees (
@@ -24,7 +41,9 @@ CREATE TABLE IF NOT EXISTS employees (
 )
 """)
 
+
 connection.commit()
 connection.close()
+
 
 print("Database ready")
